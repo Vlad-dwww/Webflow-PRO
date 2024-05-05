@@ -41,25 +41,28 @@ function getServicePercentPrices(fullPrice, percentage) {
 let servicePercentPrice = getServicePercentPrices(fullPrice, percentage);
 console.log(servicePercentPrice);
 
-function getRollbackMessage(fullPrice, servicePercentPrice) {
-    return fullPrice - servicePercentPrice;
+function getRollbackMessage(fullPrice) {
+    if (fullPrice > 50000) {
+        let percentage = 10;
+        console.log('Ваша скидка', percentage.toString(), 'процентов');
+    } else if (fullPrice > 20000 && fullPrice < 50000) {
+        let percentage = 5;
+        console.log('Ваша скидка', percentage.toString(), 'процентов');
+    } else if (fullPrice < 20000 && fullPrice > 0) {
+        console.log('Скидка не предусмотрена');
+    } else if (fullPrice < 0) {
+        console.log('Что то пошло не так');
+    } else if (fullPrice === 0) {
+        console.log('Значение стоимости: 0');
+    } else if (fullPrice === 20000) {
+        console.log('Скидка не применяется к данной сумме');
+    } else if (fullPrice === 50000) {
+        console.log('Скидка не применяется к данной сумме');
+    } else {
+        console.log('Что то пошло не так');
+    }
 }
 
 let discountAmount = getRollbackMessage(fullPrice, servicePercentPrice);
 console.log(discountAmount);
 
-if (fullPrice > 50000) {
-    let percentage = 10;
-} else if (fullPrice > 20000 && fullPrice < 50000) {
-    let percentage = 5;
-} else if (fullPrice < 20000 && fullPrice > 0) {
-    console.log('Скидка не предусмотрена');
-} else if (fullPrice < 0) {
-    console.log('Что то пошло не так');
-} else if (fullPrice === 0) {
-    console.log('Значение стоимости: 0');
-} else if (fullPrice === 20000) {
-    console.log('Скидка не применяется к данной сумме');
-} else if (fullPrice === 50000) {
-    console.log('Скидка не применяется к данной сумме');
-}
