@@ -3,10 +3,12 @@ let percentage = 10;
 let titleProject = prompt('Название проекта?')
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями')
 let responsive = confirm('Нужен ли респонсивный сайт?')
-let service1 = prompt('Какой сервис нужен?')
-let servicePrice1 = +prompt('Сколько это будет стоить?')
-let service2 = prompt('Какой еще сервис тебе нужен?')
-let servicePrice2 = +prompt('Сколько будет стоить этот второй сервис?')
+// let service1 = prompt('Какой сервис нужен?')
+// let servicePrice1 = +prompt('Сколько это будет стоить?')
+// let service2 = prompt('Какой еще сервис тебе нужен?')
+// let servicePrice2 = +prompt('Сколько будет стоить этот второй сервис?')
+let service1
+let service2
 
 console.log(screensValue);
 console.log(responsive); 
@@ -78,9 +80,9 @@ const getAllServicePrices = function() {
 
     for (let i = 0; i < 2; i++) {
         if (i === 0) {
-            service1 = prompt('Какой дополнительный тип услуги нужен', 'Услуга 1')
+            service1 = prompt('Какой дополнительный тип услуги нужен')
         } else if (i === 1) {
-            service2 = prompt('Какой дополнительный тип услуги нужен', 'Услуга 2')
+            service2 = prompt('Какой дополнительный тип услуги нужен')
         }
 
         let textFromPrompt = '';
