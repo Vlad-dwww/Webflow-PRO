@@ -80,9 +80,9 @@ const getAllServicePrices = function() {
 
     for (let i = 0; i < 2; i++) {
         if (i === 0) {
-            service1 = prompt('Какой дополнительный тип услуги нужен')
+            service1 = prompt('Какой дополнительный тип услуги нужен', 'Услуга 1')
         } else if (i === 1) {
-            service2 = prompt('Какой дополнительный тип услуги нужен')
+            service2 = prompt('Какой дополнительный тип услуги нужен', 'Услуга 2')
         }
 
         let textFromPrompt = '';
@@ -96,4 +96,6 @@ const getAllServicePrices = function() {
 
 return sum
 }
-console.log(getAllServicePrices);
+
+getAllServicePrices()
+// console.log(getAllServicePrices);
