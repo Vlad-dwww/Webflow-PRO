@@ -99,3 +99,4 @@ return sum
 
 getAllServicePrices()
 // console.log(getAllServicePrices);
+console.log(getAllServicePrices());
