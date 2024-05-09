@@ -20,6 +20,8 @@ const asking = function() {
     screenPrice = Number(screenPrice)
 }
 
+asking();
+
 const getAllServicePrices = function() {
     let sum = 0
 
@@ -41,6 +43,7 @@ const getAllServicePrices = function() {
 
 return sum
 }
+let allServicePrices = getAllServicePrices();
 
 function getTitle(titleProject) {
     return titleProject.charAt(0).toUpperCase() + titleProject.slice(1);
@@ -85,10 +88,4 @@ function getRollbackMessage(fullPrice) {
     }
 }
 
-let discountAmount = getRollbackMessage(fullPrice, servicePercentPrice);
-console.log(discountAmount);
-
-let allServicePrices = getAllServicePrices();
-console.log(allServicePrices);
-
-asking();
+getRollbackMessage(fullPrice);
